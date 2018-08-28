@@ -138,9 +138,10 @@ var y =['script'];
 console.log(x.concat(y));// join the arrays
 
 /*28.for each*/
-
-
-
-
+var books =['english','tamil','telgu'];
+var myFunction = function (item,index) {
+    console.log('Books: ' + item + ' index: ' + index);
+}
+books.forEach(myFunction);
 
 /*29 & 30 keys and entries*/
