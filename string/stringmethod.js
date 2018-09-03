@@ -61,7 +61,7 @@ console.log(x.valueOf());// return primitive value  of string
 /*11.search*/
 
 var x ='javascript is a language';
-var y =x.search('is');// search the string and return string
+var y =x.search('is');// search the string and return string index
 console.log(y);
 
 /*13.repeat*/
