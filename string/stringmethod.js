@@ -13,7 +13,7 @@ console.log(y);
 
 /*4.split*/
 var x ='java scr ipt' ;
-var y =x.split(' ')//return array with space;
+var y =x.split(' ', 1)//return array with space;
 console.log(y);
 
 /*5.match*/
