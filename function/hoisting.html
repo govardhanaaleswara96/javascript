@@ -1,0 +1,41 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hoisting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+        
+
+        // hoisting
+        value = 50;
+        console.log(value);
+        var value;
+
+        book = 'ramanayana';
+        var book;
+        console.log(book);
+
+        //normal delaration
+        var x = '10';
+        var y = '20';
+        console.log(x + y)
+        
+        
+        var a = '10';
+        console.log(a + b);
+        var b = '20';// can't access B because it is  hoisting before execution
+        
+        var c = '10';
+        var d ;
+        console.log(c + d);
+        d = '20';// can't access B because it is  hoisting before execution
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Function</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+        //function
+        function mul(a,b){
+            return a*b;
+        }
+        console.log(mul(4,3));
+        
+        // function with parameters
+        var x = function(a,b){
+            return a,b;
+        }
+        console.log(x);
+
+        // function with variable declare values 
+        var x =function(a,b){
+            return a*b;
+        }
+        console.log(x(4,3));
+
+        //function constructor
+        var myFunction = new Function('a', 'b', 'return a * b');
+        
+        console.log(myFunction(8,8));
+
+        //function with hoisting
+        myFunction(12,12);// function defind values not hoisted
+        function myFunction(a,b){
+            return a*b;
+        };
+        console.log(myFunction);
+        
+        //self-invoking function
+        (function(){
+            console.log('done some thing');
+        })();
+
+        // function with parameters
+
+        function product(a,b){
+            return a * b
+        }
+        var a = product(4,3)
+        console.log(a);
+        
+        function product(a,b){
+            return a * b
+        }
+        var a = product(8,8) * 4;
+        console.log(a);
+        
+        // functions are object
+        function product(a,b){
+            return arguments.length;
+        }
+        console.log(product(1,2));
+
+         function product(a,b){
+            return a * b;
+        }
+        console.log(product.toString());
+        
+        //function parameters
+        function myFunction(x, y) {
+            if (y === undefined) {
+                 y = 0;
+             }    
+            return x * y;
+            }
+         var a =myFunction(4);
+         console.log(a);
+
+         //aruguments object
+         function findMax() {
+         var i;
+         var max = -Infinity;
+         for(i = 0; i < arguments.length; i++) {
+            if (arguments[i] > max) {
+            max = arguments[i];
+                 }
+            }
+                return max;
+        } 
+        var maxValue = findMax(4, 5, 6);
+        console.log(maxValue);
+
+        function sumAll() {
+        var i;
+        var sum = 0;
+        for(i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+        }
+        return sum;
+       } 
+
+       console.log(sumAll(1, 123, 500, 115, 44, 88));
+
+      //function invoking
+      function product(a,b){
+            return a * b
+        }
+        var a = product(4,3)
+        console.log(a);
+
+        function product(a,b){
+            return a * b
+        }
+        var a =window.product(4,3)
+        console.log(a);
+
+        // this keyword
+        var x = myFunction();
+        function myFunction() {
+            return this;
+        }
+        console.log(x); 
+
+        // this method 
+        var emp = {
+            name:'goa',
+            age:'22',
+            detalils:function(){
+                return this.name +' ' + this.age;
+            }
+        }
+       console.log(emp.detalils());
+
+        // call method 
+        var emp = {
+            name:'goa',
+            age:'22',
+            }
+        var emp1 ={
+           detalils:function(){
+                return this.name +' ' + this.age;
+            }
+        }  
+        console.log(emp1.detalils.call(emp));
+        // call method with parameters
+        var emp = {
+            name:'goa',
+            age:'22',
+            }
+        var emp1 ={
+           detalils:function(place,country){
+                return this.name +' ' + this.age +' ' + place + ' ' + country;
+            }
+        }  
+        console.log(emp1.detalils.call(emp,'tamilnadu','india'));
+
+        //apply method
+        var emp = {
+            name:'goa',
+            age:'22',
+            }
+        var emp1 ={
+           detalils:function(){
+                return this.name +' ' + this.age;
+            }
+        }  
+        console.log(emp1.detalils.apply(emp));
+
+        // apply method with parameters
+        var emp = {
+            name:'goa',
+            age:'22',
+            }
+        var emp1 ={
+           detalils:function(place,country){
+                return this.name +' ' + this.age +' ' + place + ' ' + country;
+            }
+        }  
+        console.log(emp1.detalils.apply(emp,['tamilnadu','india']));
+
+        // apply method with arrys in max
+        
+         console.log(Math.max(1,2,3));
+        
+         console.log(Math.max.apply([1,2,3]));
+
+         console.log(Math.max.apply(null, [1,2,3]));
+
+         console.log(Math.max.apply(Math,[1,2,3]));
+
+         console.log(Math.max.apply(" ", [1,2,3]));
+
+         console.log(Math.max.apply(0, [1,2,3]));
+
+         // function closures
+
+         //nested function
+         function count(){
+             var counter = 0;
+             function plus() {
+              counter += 1;   
+             }
+            plus();
+            return counter;
+         }
+         console.log('count: ' + count());
+         
+         //closures
+         var num1 = 10;
+          function getOuter(){
+              var num2 = 20;
+              var getInner =function(){
+                  var num3 = 30;
+                  console.log(num1);
+                  console.log(num2);
+                  console.log(num3);
+              }
+              return getInner;
+          }
+          function getFn(fName){
+              fName();
+          }
+         var values =getOuter();
+         console.log(getFn(values));
+
+     </script>
+    
+</body>
+</html>
