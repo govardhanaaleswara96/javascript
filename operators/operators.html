@@ -1,0 +1,166 @@
+<html>
+<head>
+  <title>Operator</title>
+</head>
+<body>
+  <script>
+
+// assigment operators =
+
+//arithmetic operators + - * /
+var x = 30;
+var y = 20;
+add = x + y;
+sub = x - y;
+mul = x * y;
+div = x / y ;
+console.log('add:'+ add );// 50
+console.log('sub: ' + sub );// 10
+console.log('mul: ' + mul );// 600
+console.log('div: ' + div );// 1.5
+
+//short hand math
+var x = 10;
+var y = 10;
+ x += y;
+ console.log('add  ' + x);// 20
+ x -= y;
+ console.log('sub  ' + x); //10;
+ x *= y;
+ console.log('mul  ' + x);// 100
+
+var x = 10;
+var y = 10;
+ x /= y;
+console.log('div ' + x);// 10
+ 
+//conditional operators 
+
+// equal value ==
+var num = 10
+console.log('== : ' +(num == 10));
+
+var num = '10';  // covert to type also
+console.log('== : ' +(num == 10));
+
+// equal value and type ===
+var num = 10
+console.log('=== : ' +(num === 10));
+
+var num = '10';  // only compare the values
+console.log('=== : ' +(num === 10));
+
+// not equal !=
+var num = 10
+console.log('!= : ' +(num != 10));
+
+// not equal and type
+var num = '10'
+console.log('!== : ' +(num !== 10));
+
+// > greater than
+var num = 10;
+console.log('> : ' + (num > 10));
+
+// < lesser than
+var num = 10;
+console.log('< : ' + (num < 10));
+
+// >= greater than
+var num1 = 20;
+console.log('>= : ' + (num1 >= 20));
+
+
+// <= lesser than
+var num1 = 20;
+console.log('<= : ' + (num1 <= 20));
+
+//  uniary operators
+// Increment post 
+var a = 1;
+console.log(a++);    // 1
+console.log(a);      // 2
+// Decrement post
+var b = 1;
+console.log(b--);    // 1
+console.log(b);      // 0
+
+// Increment pre
+var x = 1;
+console.log(++x);    // 2
+console.log(x);      // 2
+
+// Decrement pre
+
+var y = 1;
+console.log(--y);    // 0
+console.log(y);      // 0
+
+// logical operators
+//AND &&
+var x = 10;
+var y = 20;
+var and = (x > 10 && y < 30);
+console.log('AND : ' + and);
+
+
+//OR ||
+var x = 10;
+var y = 20;
+var or = (x > 10 || y < 30);
+console.log('OR : ' + or);
+
+//NOT &&!
+var x = 10;
+var y = 10;
+var not = !(x === y);
+console.log('NOT : ' + not);
+
+//string operator
+var x = '10';
+var y = '20';
+console.log('string: ' + (x + y));
+
+// type of 
+var num = 10;
+console.log('type of :' +typeof num);
+
+var str = '10';
+console.log('type of: ' + typeof str);
+
+var boolean = true;
+console.log('type of: ' + typeof boolean);
+
+var num = null;
+console.log('type of : ' + typeof null);
+
+var num = NaN;
+console.log('type of: ' + typeof NaN);
+
+//ternary operator
+var age = 20;
+(age > 18) ? console.log('you are minor'):console.log('you are major');
+
+// delete operator
+var emp = {
+  name: 'gova',
+  age: '22',
+}
+delete emp.age;
+console.log(emp.age);
+
+//in operator
+console.log('in Operator: ' + name in emp); // true
+
+// instanceof  ()
+console.log('in Operator: ' + emp instanceof Array);// false because it is object
+
+// void operator define undefind value
+var num = 10;
+console.log(void(num)); // undefind
+
+
+
+</script>
+</body>
+</html>
